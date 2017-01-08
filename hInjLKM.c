@@ -108,31 +108,51 @@ MODULE_LICENSE("GPL");
 #define __MHYPERCALL1ARGS_IF(x) \
         if(hinjHypNum == x){ \
           gen_hypercall1arg(x, hinjParams[0]); \
-          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n");} \
+          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n"); \
+          printk(KERN_INFO "gen_hypercall1arg : \n"); \
+          printk(KERN_INFO " - sizeof(hinjParams[0]) == %zu \n", sizeof(hinjParams[0]));} \
         else (void)0;
 
 #define __MHYPERCALL2ARGS_IF(x) \
         if(hinjHypNum == x){ \
           gen_hypercall2arg(x, hinjParams[0], hinjParams[1]); \
-          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n");} \
+          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n"); \
+          printk(KERN_INFO "gen_hypercall2arg : \n"); \
+          printk(KERN_INFO " - sizeof(hinjParams[0]) == %zu \n", sizeof(hinjParams[0])); \
+          printk(KERN_INFO " - sizeof(hinjParams[1]) == %zu \n", sizeof(hinjParams[1]));} \
         else (void)0;
 
 #define __MHYPERCALL3ARGS_IF(x) \
         if(hinjHypNum == x){ \
           gen_hypercall3arg(x, hinjParams[0], hinjParams[1], hinjParams[2]); \
-          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n");} \
+          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n"); \
+          printk(KERN_INFO "gen_hypercall3arg : \n"); \
+          printk(KERN_INFO " - sizeof(hinjParams[0]) == %zu \n", sizeof(hinjParams[0])); \
+          printk(KERN_INFO " - sizeof(hinjParams[1]) == %zu \n", sizeof(hinjParams[1])); \
+          printk(KERN_INFO " - sizeof(hinjParams[2]) == %zu \n", sizeof(hinjParams[2]));} \
         else (void)0;
 
 #define __MHYPERCALL4ARGS_IF(x) \
         if(hinjHypNum == x){ \
           gen_hypercall4arg(x, hinjParams[0], hinjParams[1], hinjParams[2], hinjParams[3]); \
-          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n");} \
+          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n"); \
+          printk(KERN_INFO "gen_hypercall4arg : \n"); \
+          printk(KERN_INFO " - sizeof(hinjParams[0]) == %zu \n", sizeof(hinjParams[0])); \
+          printk(KERN_INFO " - sizeof(hinjParams[1]) == %zu \n", sizeof(hinjParams[1])); \
+          printk(KERN_INFO " - sizeof(hinjParams[2]) == %zu \n", sizeof(hinjParams[2])); \
+          printk(KERN_INFO " - sizeof(hinjParams[3]) == %zu \n", sizeof(hinjParams[3]));} \
         else (void)0;
 
 #define __MHYPERCALL5ARGS_IF(x) \
         if(hinjHypNum == x){ \
           gen_hypercall5arg(x, hinjParams[0], hinjParams[1], hinjParams[2], hinjParams[3], hinjParams[4]); \
-          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n");} \
+          printk(KERN_INFO "Invoked hypercall with no.: " #x"\n"); \
+          printk(KERN_INFO "gen_hypercall5arg : \n"); \
+          printk(KERN_INFO " - sizeof(hinjParams[0]) == %zu \n", sizeof(hinjParams[0])); \
+          printk(KERN_INFO " - sizeof(hinjParams[1]) == %zu \n", sizeof(hinjParams[1])); \
+          printk(KERN_INFO " - sizeof(hinjParams[2]) == %zu \n", sizeof(hinjParams[2])); \
+          printk(KERN_INFO " - sizeof(hinjParams[3]) == %zu \n", sizeof(hinjParams[3])); \
+          printk(KERN_INFO " - sizeof(hinjParams[4]) == %zu \n", sizeof(hinjParams[4]));} \
         else (void)0;
 
 

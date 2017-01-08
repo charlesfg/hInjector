@@ -79,4 +79,5 @@ except IndexError:
 except IOError:
   print "Cannot find configuration file."
   sys.exit(0)
+print "./hInjSender " + ret
 os.system("./hInjSender " + ret)
